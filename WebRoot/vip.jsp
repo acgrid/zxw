@@ -44,10 +44,6 @@
               <td width="280" align="left" valign="top">${currentUser.vipyue}元</td>
             </tr>
             <tr>
-              <td width="145" align="left" valign="top" class="body"><strong>当前积分:</strong></td>
-              <td width="280" align="left" valign="top">${currentUser.vipjifen}分</td>
-            </tr>
-            <tr>
               <td width="145" align="left" valign="top" class="body"><strong>充值金额:</strong></td>
               <td width="280" align="left" valign="top"><input id="vipyue" name="user.vipyue" type="text" size="40" /></td>
             </tr>
