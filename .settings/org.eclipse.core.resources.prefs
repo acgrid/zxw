@@ -1,0 +1,19 @@
+#Sun May 20 13:21:21 CST 2018
+eclipse.preferences.version=1
+encoding//src/cn/dao/AdminDao.java=UTF-8
+encoding//src/cn/dao/BaomingDao.java=UTF-8
+encoding//src/cn/dao/CompanyDao.java=UTF-8
+encoding//src/cn/dao/GuanzhuDao.java=UTF-8
+encoding//src/cn/dao/HuodongDao.java=UTF-8
+encoding//src/cn/dao/JobDao.java=UTF-8
+encoding//src/cn/dao/LiwuDao.java=UTF-8
+encoding//src/cn/dao/MessageDao.java=UTF-8
+encoding//src/cn/dao/PostDao.java=UTF-8
+encoding//src/cn/dao/ProtocolDao.java=UTF-8
+encoding//src/cn/dao/QingjiaDao.java=UTF-8
+encoding//src/cn/dao/TeacherDao.java=UTF-8
+encoding//src/cn/dao/UserDao.java=UTF-8
+encoding//src/cn/dao/ZengsongDao.java=UTF-8
+encoding//src/cn/dao/zhongheDao.java=UTF-8
+encoding//src/cn/util/ResponseCode.java=UTF-8
+encoding//src/cn/util/ServerResponse.java=UTF-8

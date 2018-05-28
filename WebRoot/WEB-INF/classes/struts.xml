@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 第4步，在struts.xml里面配置action -->
+	<package name="default" extends="struts-default">
+		<!-- class属性要等于Spring容器里面的action的id -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="index">/index.jsp</result>
+			<result name="list">/manage/user_list.jsp</result>
+			<result name="login">/login.jsp</result>
+			<result name="detail">/detail.jsp</result>
+			<result name="my">/my.jsp</result>
+			<result name="my2">/my2.jsp</result>
+			<result name="vip">/vip.jsp</result>
+			<result name="success" type="redirect">/user_search.action</result>
+			<result name="userlist" type="redirect">/user_list.action</result>
+		</action>
+		<action name="admin_*" class="adminAction" method="{1}">
+			<result name="index">/manage/index.jsp</result>
+			<result name="login">/manage/login.jsp</result>
+			<result name="updatepwd">/manage/updatepwd.jsp</result>
+		</action>
+		<action name="liwu_*" class="liwuAction" method="{1}">
+			<result name="list" type="redirect">/liwu_list.action</result>
+			<result name="success">/manage/liwu_list.jsp</result>
+			<result name="liwulist">/liwu.jsp</result>
+		</action>
+		<action name="huodong_*" class="huodongAction" method="{1}">
+			<result name="list" type="redirect">/huodong_list.action</result>
+			<result name="success">/manage/huodong_list.jsp</result>
+			<result name="view">/huodong_view.jsp</result>
+			<result name="default">/default.jsp</result>
+		</action>
+		<action name="message_*" class="messageAction" method="{1}">
+			<result name="success">/message.jsp</result>
+			<result name="list" type="redirect">/message_list.action</result>
+		</action>
+		<action name="upload" class="uploadAction" method="upload">
+             <result name="success">/upload/upload_re.jsp</result>
+        </action>
+	</package>
+</struts>

@@ -1,0 +1,210 @@
+body{
+	margin:0;
+	font:12px/14px "Tahoma", Arial, Helvetica, sans-serif;
+	background:url(../images/bg.gif) repeat 0 0;
+	padding-top: 40px;
+	
+}
+p,ul,li,h1,h2,h3,h4,h5,h6{ margin:0; padding:0}
+img{border:none}
+.clear{clear:both}
+*{margin:0; padding:0}
+
+input.button {
+background:#414141 none repeat scroll 0 0;
+border:1px solid #000000;
+color:#FFFFFF;
+font-family:Arial,Helvetica,sans-serif;
+font-size:11px;
+font-size-adjust:none;
+font-stretch:normal;
+font-style:normal;
+font-variant:normal;
+font-weight:bold;
+line-height:normal;
+margin:0 5px 5px 0;
+padding:10px;
+text-decoration:none;
+}
+
+
+#layout{
+	width:902px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+#header{float:left; width:902px;}
+
+#banner{float:left; width:595px}
+#banner img{float:left; width:auto; padding:1px 0 0 0}
+#menu{float:left; width:171px; height:302px; background:url(../images/menu_bg.gif) repeat-y 0 0; border-bottom:1px solid #000}
+#menu ul{float:left; width:171px; list-style:none; padding-top:63px}
+#menu li{float:left; width:146px; height:20px; background:url(../images/menu_border.gif) no-repeat 0 bottom; font:bold 14px/16px "ZapfHumnst BT", Arial, Helvetica, sans-serif; color:#3B3717; text-align:right; padding:5px 25px 0 0}
+#menu li a{color:#3B3717; text-decoration:none}
+#menu li a:hover{color:#3B3717; text-decoration:underline}
+#menu li a.current{color:#3B3717; text-decoration:none}
+
+.left_bg{float:left; width:136px}
+.left_bg img{float:left; width:136px; padding:1px 0 0 0}
+
+#body_container{width:902px;}
+
+#left_container{float:left; width:306px}
+
+.user_login{float:left; width:306px; background:#2985a4 url(../images/login_bg.gif) repeat-x 0 0}
+.user_login .login_box_left{float:left; width:109px}
+.user_login .login_box_left h2{float:left; width:89px;height:80px; background:url(../images/login_border.gif) no-repeat right 22px; padding:25px 0 29px 10px}
+.user_login .login_box_right{float:left; width:197px; padding-top:28px}
+.user_login .login_box_right label{float:left; width:62px; text-align:right; font-size:9px; line-height:11px; color:#fff; padding:3px 5px 0 0}
+.user_login .login_box_right input{float:left; width:107px; border:none; padding:0; margin:0 0 4px 0}
+.user_login .login_box_right input.login{float:left; width:auto; padding:0; margin:0 0 5px 68px; display:inline}
+.user_login .login_box_right p{float:left; width:179px; font-size:9px; line-height:11px; color:#fff; padding:0 0 0 18px}
+
+
+.last_added{width:887px;overflow: hidden;color:#FFF;}
+.last_added h3{height:30px; font:18px/20px "ZapfHumnst BT",Arial, Helvetica, sans-serif; color:#FFF; background:url(../images/last_added_bg.gif) repeat-x 0 0; padding:10px 0 0 25px}
+
+.last_added .profile_box{overflow: hidden; margin:5px 2px 10px 2px;float:left; width:215px; border:1px dashed #EEE;  padding-bottom:2px}
+.last_added .profile_box.last{background:#e1dba6}
+.last_added .profile_box .photo{float:left; width:80px;}
+.last_added .profile_box .photo img{float:left; margin:4px 0 0 4px; padding-bottom:6px; display:inline}
+.last_added .profile_box .profile_detail{float:left; width:135px;}
+.last_added .profile_box .profile_detail p{float:left; width:132px; font-size:9px; line-height:11px; font-weight:bold; color:#FFF; padding:2px 0 0 0}
+.last_added .profile_box .profile_detail p span{font-weight:normal;line-height:20px;}
+.last_added .profile_box .profile_detail p.know_more{float:left; width:120px; font-size:9px; line-height:11px; color:#FFF; text-align:right; padding:0; margin:0}
+.last_added .profile_box .profile_detail p.know_more a{color:#F60610; text-decoration:none}
+.last_added .profile_box .profile_detail p.know_more a:hover{color:#FFF; text-decoration:underline}
+
+.find_more_profile{ width:887px; background:#1d7192; border-bottom:1px solid #000}
+.find_more_profile p{font-size:9px; line-height:11px; font-weight:bold; color:#fff; text-align:right; padding:5px 0 4px 0}
+.find_more_profile p a{color:#fff; text-decoration:none}
+.find_more_profile p a:hover{color:#fff; text-decoration:underline}
+
+#right_container{float:left;width:592px;overflow: hidden;}
+#right_container .option_detail{float:left; width:586px;}
+#right_container .option_detail.inner{float:left; width:596px; padding: 0 0 20px 0 }
+.register{float:left; width:195px}
+.profile{float:left; width:191px}
+.dating{float:left; width:195px}
+
+.partner_search{clear:both;width:877px;overflow: hidden; padding:5px; border-bottom:1px solid #000; border-left:1px solid #000; background:#1D7192}
+.partner_search .search_form{width:100%; border:1px dashed #DDD;overflow: hidden; }
+.partner_search .search_form h2{width:250px; font:18px/20px "ZapfHumnst BT",Arial, Helvetica, sans-serif; color:#000; padding:16px 0 10px 20px; margin:0}
+.partner_search .search_form .search_row{float:left; width:100%; padding-bottom:8px}
+.partner_search .search_form .search_row .search_column_1{float:left; width:65px; padding:0 0 0 28px}
+.partner_search .search_form .search_row .search_column_2{float:left; width:95px}
+.partner_search .search_form .search_row.last{float:left; width:100%; padding:5px 0 0 0}
+
+.partner_search .search_form form{width:100%;}
+.partner_search .search_form fieldset{width:100%; border:none; margin:0; padding:0 0 0 0}
+.partner_search .search_form label{float:left; width:auto; font-size:9px; line-height:11px; color:#401626; padding:5px 5px 0 5px}
+.partner_search .search_form label.check{float:left; width:auto; font-size:9px; line-height:11px; color:#401626; padding:4px 8px 0 9px; margin:0}
+.partner_search .search_form input{float:left; width:90px; font-size:11px; line-height:13px; color:#216588; margin:0; padding:0}
+.partner_search .search_form input.checkbox{float:left; width:auto; border:none; height:15px; padding:0; margin:2px 0 0 0}
+.partner_search .search_form input.search_btn{float:left; width:auto; padding:0; margin:0 0 0 0}
+.partner_search .search_form select{float:left; width:60px; height:19px; font-size:9px}
+.partner_search .search_form select.gender{float:left; width:80px;}
+.partner_search .search_form select.date{float:left; width:171px;}
+.partner_search .search_form select.dob{float:left; width:55px; font-size:10px; margin:0 3px 0 0}
+
+
+#footer{float:left; width:887px; background:#5ABDCF; padding:39px 0 0 0}
+#footer ul{width:887px; list-style:none; text-align:center; margin:0; padding:0 0 39px 0}
+#footer li{width:auto; font-size:9px; line-height:11px; color:#fff; background:url(../images/menu_footer_border.gif) no-repeat 0 0; display:inline; padding:0 8px 0 8px}
+#footer li.first{background:none}
+#footer li a{color:#fff; text-decoration:none}
+#footer li a:hover{color:#fff; text-decoration:underline}
+#footer li a.current{color:#fff; text-decoration:underline}
+
+
+
+
+
+#body_container_inner{float:left; width:887px;background: url(../images/body_container_bg.gif) repeat-y 0 0; padding:0 0 20px 0}
+#left_container_inner{float:left; width:200px; padding:0 0 0 0}
+#right_container_inner{float:left; width:630px; padding:0 0 0 0}
+
+
+
+
+
+/* inner pages css start */
+h1{font:24px/26px Georgia, "Times New Roman", Times, serif; color:#221E21; font-style:italic; margin:0px; padding:8px 0px 10px 0; text-decoration:none}
+h1 span{color:#221E21}
+.aboutus-img{float:right; border:4px solid #dcdcda;	margin:0px 0px 10px 20px;}
+h5{font:15px Myriad Pro, Arial, Helvetica, sans-serif; color:#000; font-weight:100; padding:0px 0px 5px 0px;	border-bottom:1px dotted #000;	margin:0px 0px 10px 0px; background:none }
+h6{font:17px Myriad Pro, Arial, Helvetica, sans-serif; color:#000; font-weight:100; padding:0px 0px 5px 0px;	margin:0px 0px 0px 0px; background:none; border:none }
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+.insidereadmore a{color:#5D2D23; font-size:14px; text-decoration:none}
+.insidereadmore a:hover{text-decoration:underline}
+
+a.projects{color:#5D2D23; font-size:14px; text-decoration:underline}
+a:hover.projects{text-decoration:none}
+
+input.button{color:#ffffff;	background:#414141;	font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #000;}
+input.button:hover{cursor:pointer; color:#cccccc;}
+.project-img{float:right; margin-left:20px;	border: 6px solid #dcdcda;}
+.whiteheading{font:30px Myriad Pro, Arial; color:#000; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #000; padding-bottom:10px;}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:3px; background:#dcdcda}
+
+.blog-posted-row a{color:#5D2D23; font-size:14px; text-decoration:underline; padding:0 0 0 8px}
+.blog-posted-row a:hover{text-decoration:none}
+/* inner pages css ends */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+h1{font:24px/26px Georgia, "Times New Roman", Times, serif; color:#221E21; font-style:italic; padding:0 0 22px 0; margin:0}
+h1 span{color:#221E21}
+h1.inner{font:24px/26px Georgia, "Times New Roman", Times, serif; color:#221E21; font-style:italic; padding:0 0 0 0; margin:0}
+
+a{color:#a93404; text-decoration:none;}
+a:hover{color:#ff6f5f}
+a:hover.supports{color:#000; text-decoration:none;}
+
+.welcomezone{padding:0 40px 25px 20px;}
+
+
+.blueboldheading{font:bold 29px Kozuka Gothic Pro, Myriad Pro, Arial, Helvetica, sans-serif;color:#92BBEB;padding:0 0px 15px 0px;margin:0px 0px 0px 0px;}
+.whitelightheading {font:29px Kozuka Gothic Pro, Myriad Pro, Arial, Helvetica, sans-serif;font-weight:100;color:#ffffff;margin:0px;	padding:0px;}
+
+
+.project-img{float:right; margin-left:20px; border: 6px solid #ffffff;}
+.project-img_1{float:right; margin-left:20px; border: 6px solid #ffffff; margin-top:20px}
+.row2{padding:10px 40px 40px 40px;}
+.box1{width:45%; float:left; padding:5px;}
+.about-img{float:left; margin-right:20px;}
+
+p{line-height:15px; text-align:justify}
+.box2{width:45%; float:left;padding:5px;margin-left:5%}
+h2{font:bold 13px Arial, Helvetica, sans-serif;	color:#221E21; padding:0px 0px 5px 0px;	border-bottom:1px dotted #386db2;margin:0px 0px 0 0px;}
+h3{font:bold 13px Arial, Helvetica, sans-serif;	color:#221E21; padding:0px 0px 5px 0px;	margin:0px;}
+.blog-posted-row{background:#bfebf3; padding:3px;}
+
+textarea{width:322px}
+*/
+
