@@ -26,7 +26,11 @@
 	          <p>欢迎你:${currentUser.username}
 	          <s:if test="#session.currentUser.isyanz==1">
     		<img src="images/huangguan.png" style="max-width:25px;vertical-align:middle" title="认证会员"/> 
-    	</s:if></p>
+    	</s:if>
+    	<s:if test="#session.currentUser.vip">
+    		<img src="images/vip.png" style="max-width:25px;vertical-align:middle" title="VIP会员"/> 
+    	</s:if>
+    	</p>
 	          <br/><br/><br/>
 	          <p><a href="user_logout.action">退出</a></p>
 	        </div>

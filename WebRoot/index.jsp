@@ -188,6 +188,9 @@
 		    	<s:if test="isyanz==1">
 		    		<img src="images/huangguan.png" style="max-width:25px;vertical-align:middle" title="认证会员"/> 
 		    	</s:if>
+		    	<s:if test="#session.currentUser.vip">
+		    		<img src="images/vip.png" style="max-width:25px;vertical-align:middle" title="VIP会员"/> 
+		    	</s:if>
 		             <br/>
 		            	性别: <span><s:property value="sex"/></span><br>
 		              	生日: <span><s:property value="shengri"/></span><br>
