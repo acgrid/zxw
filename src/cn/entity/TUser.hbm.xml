@@ -49,6 +49,9 @@
         <property name="vipjifen" type="java.lang.Integer">
             <column name="vipjifen" />
         </property>
+        <property name="vipexpire" type="java.lang.Integer">
+            <column name="vipexpire" />
+        </property>
         <bag name="guanzhus" cascade="all" lazy="false">
         	<key column="myid"></key>
         	<one-to-many class="cn.entity.TGuanzhu"/>

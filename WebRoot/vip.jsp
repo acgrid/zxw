@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="cn.util.Const"%>
 <!DOCTYPE html>
 <html>
@@ -29,9 +31,9 @@
       
       <div id="body_container_inner" style="padding:20px 35px 30px 15px;">
       <h1>VIP模块</h1>
-      
+      <s:if test="#session.currentUser!=null">
       <div> <br />
-       
+       	<h2>在线充值</h2>
         <form action="user_vip.action" method="post" onsubmit="return checkChong()">
        	 <input name="id" type="hidden" value="${currentUser.id}" />
           <table width="80%">
@@ -70,10 +72,41 @@
             </tr>
           </table>
         </form>
-      </div>
-      <div> <br />
         
       </div>
+      <div> <br />
+        <h2>开通会员</h2>
+        <form action="user_vipRenew.action" method="post" onsubmit="return checkKai()">
+       	 <input name="id" type="hidden" value="${currentUser.id}" />
+          <table width="80%">
+            <tr>
+              <td width="145" align="left" valign="top" class="body"><strong>用户名:</strong></td>
+              <td width="280" align="left" valign="top">${currentUser.username}</td>
+            </tr>
+            <tr> 
+              <td width="145" align="left" valign="top" class="body"><strong>当前会员有效期:</strong></td>
+              <td width="280" align="left" valign="top"><c:out value="${currentUser.vipexpireStr}" /></td>
+            </tr>
+            <tr>
+              <td width="145" align="left" valign="top" class="body"><strong>VIP会员价格:</strong></td>
+              <td width="280" align="left" valign="top"><%=Const.VIP_FEE_PER_MONTH / 100.0f %>元/月</td>
+            </tr>
+            <tr>
+              <td width="145" align="left" valign="top" class="body"><strong>开通/续期月数:</strong></td>
+              <td width="280" align="left" valign="top"><input id="vipmonth" name="month" type="number" min="1" value="1" /></td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" class="body"><strong>密码:</strong></td>
+              <td align="left" valign="top"><input id="password2" name="user.password" type="password" size="40" /></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="submit" name="submit" class="button" value="开 通" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      </s:if>
     </div>
       
 	  
@@ -95,6 +128,16 @@ function checkChong(){
 		return false;
 	}
 	if($("#password1").val()==""){
+		alert("请输入密码!");
+		return false;
+	}
+}
+function checkKai(){
+if($("#vipmonth").val()==""){
+		alert("请输入开通月数!");
+		return false;
+	}
+	if($("#password2").val()==""){
 		alert("请输入密码!");
 		return false;
 	}

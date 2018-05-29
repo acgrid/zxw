@@ -25,6 +25,9 @@ public class TUser implements java.io.Serializable {
 	private String shouji;
 	private Integer vipyue;
 	private Integer vipjifen;
+	private Boolean vip;
+	private Integer vipexpire;
+	private String vipexpireStr;
 	
 
 	private String idcard;
@@ -151,6 +154,32 @@ public class TUser implements java.io.Serializable {
 
 	public void setVipjifen(Integer vipjifen) {
 		this.vipjifen = vipjifen;
+	}
+	
+	public Boolean isVip(){
+		this.vip = this.vipexpire > System.currentTimeMillis() / 1000;
+		return this.vip;
+	}
+	
+	public Integer getVipexpire(){
+		return this.vipexpire;
+	}
+	
+	public void setVipexpire(Integer expire){
+		this.vipexpire = expire;
+	}
+	
+	public String getVipexpireStr(){
+		if(this.isVip()){
+			vipexpireStr = new java.text.SimpleDateFormat("年MM月dd日 HH:mm:ss").format(new java.util.Date(this.vipexpire * 1000));
+		}else{
+			vipexpireStr = "当前不是会员";
+		}
+		return vipexpireStr;
+	}
+	
+	public void extendVipExpire(Integer days){
+		this.setVipexpire((this.isVip() ? this.vipexpire : (int) (System.currentTimeMillis() / 1000)) + days * 86400);
 	}
 
 	public String getSex() {
