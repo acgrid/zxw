@@ -14,6 +14,7 @@ import cn.entity.TGuanzhu;
 import cn.entity.THuodong;
 import cn.entity.TUser;
 import cn.util.PageBean;
+import cn.util.Const;
 
 @Controller("userAction")
 public class UserAction extends BaseAction {
@@ -21,6 +22,7 @@ public class UserAction extends BaseAction {
 	private String username;
 	private String password;
 	private String password1;
+	private String month;
 	
 	//搜索选项
 	private String sex;
@@ -247,7 +249,6 @@ public class UserAction extends BaseAction {
 	}
 	
 	//vip充值
-	//修改个人资料
 	public String vip() {
 		TUser u=userDao.get(TUser.class, id);
 		u.setVipyue(u.getVipyue()+user.getVipyue());
@@ -256,6 +257,25 @@ public class UserAction extends BaseAction {
 		request.setAttribute("msg", "充值成功!");
 		return "vip";
 	}
+	
+	public String renew(){
+		TUser u = userDao.get(TUser.class, id);
+		Integer renew_month = Integer.parseInt(month);
+		Integer cost = Const.VIP_FEE_PER_MONTH / 100 * renew_month;
+		if(u.getVipyue() < cost){
+			request.setAttribute("msg", "对不起，余额不足，请先充值!");
+		}else{
+			u.setVipyue(u.getVipyue() - cost);
+			u.extendVipExpire(Integer.parseInt(month) * 30);
+			userDao.update(u);
+			session.setAttribute("currentUser", u);
+			request.setAttribute("msg", "会员开通成功!");
+		}
+		return "vip";
+	}
+	
+
+	//修改个人资料
 	public String updatepwd() {
 			TUser user = (TUser) session.getAttribute("currentUser");
 			if (!password.equals(user.getPassword())) {
@@ -284,6 +304,14 @@ public class UserAction extends BaseAction {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public String getMonth() {
+		return month;
+	}
+
+	public void setMonth(String month) {
+		this.month = month;
 	}
 
 	public String getPassword() {

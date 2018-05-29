@@ -76,7 +76,7 @@
       </div>
       <div> <br />
         <h2>开通会员</h2>
-        <form action="user_vipRenew.action" method="post" onsubmit="return checkKai()">
+        <form action="user_renew.action" method="post" onsubmit="return checkKai()">
        	 <input name="id" type="hidden" value="${currentUser.id}" />
           <table width="80%">
             <tr>
@@ -85,11 +85,11 @@
             </tr>
             <tr> 
               <td width="145" align="left" valign="top" class="body"><strong>当前会员有效期:</strong></td>
-              <td width="280" align="left" valign="top"><c:out value="${currentUser.vipexpireStr}" /></td>
+              <td width="280" align="left" valign="top" id="vipExpireValue"><c:out value="${currentUser.vipexpire}" /></td>
             </tr>
             <tr>
               <td width="145" align="left" valign="top" class="body"><strong>VIP会员价格:</strong></td>
-              <td width="280" align="left" valign="top"><%=Const.VIP_FEE_PER_MONTH / 100.0f %>元/月</td>
+              <td width="280" align="left" valign="top"><%=Const.VIP_FEE_PER_MONTH / 100 %>元/月</td>
             </tr>
             <tr>
               <td width="145" align="left" valign="top" class="body"><strong>开通/续期月数:</strong></td>
@@ -121,7 +121,13 @@
   <%@include file="footer.jsp" %>
 </div>
 <script type="text/javascript">
-//上传文件
+var expire_display = $("#vipExpireValue"), expire_timestamp = expire_display.text();
+if(expire_timestamp){
+	expire_date = new Date(parseInt(expire_timestamp) * 1000);
+	expire_display.text(expire_date.toLocaleDateString());
+}else{
+	expire_display.text("当前不是会员");
+}
 function checkChong(){
 	if($("#vipyue").val()==""){
 		alert("请输入充值金额!");
@@ -143,6 +149,11 @@ if($("#vipmonth").val()==""){
 	}
 }
 </script>
+<s:if test="#request.msg!=null">
+  	<script>
+  		alert("${msg}");
+  	</script>
+  </s:if>
 </body>
 </html>
 
